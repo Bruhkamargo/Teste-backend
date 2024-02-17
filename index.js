@@ -33,7 +33,7 @@ app.post('/users', (req, res) => {
     }
     users.push(NewUser);
 
-    return res.json(Result);
+    return res.json(NewUser);
 })
 
 app.listen(port, () => {
