@@ -1,8 +1,10 @@
+const cors = require("cors");
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(express.json());
+app.use(cors());
 
 const users = [
     ["Nome", 18, true],
@@ -16,7 +18,6 @@ app.get('/', (req, res) => {
 
 app.get('/users', (req, res) => {
     return res.json(users[0]);
-    console.log(req);
 })
 
 app.listen(port, () => {
