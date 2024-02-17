@@ -9,11 +9,11 @@ const users = [
 ]
 
 app.get('/', (req, res) => {
-    res.send('Hello Word!');
+    return res.send('Hello Word!');
 });
 
 app.get('/users', (req, res) => {
-    res.send(users[0]);
+    return res.send(users[0]);
     console.log(req);
 })
 
