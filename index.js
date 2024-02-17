@@ -25,9 +25,9 @@ app.get('/users', (req, res) => {
 app.post('/users', (req, res) => {
     const { Peso, Altura } = req.body;
     const NewUser = {
-        id: Math.random().toString(36),
-        Peso: Peso,
-        Altura: Altura
+        id: Math.random().toString(36).substring(7),
+        Peso: 'Peso',
+        Altura: 'Altura'
     }
     users.push(NewUser);
 
