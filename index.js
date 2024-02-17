@@ -24,11 +24,12 @@ app.get('/users', (req, res) => {
 
 app.post('/users', (req, res) => {
     const { Peso, Altura } = req.body;
+    let Calc = (Peso /((Altura / 100) **2))
     const NewUser = {
         id: Math.random().toString(36).substring(7),
         Peso: Peso,
         Altura: Altura,
-        Result: (Peso /((Altura / 100) **2))
+        Result: Calc
     }
     users.push(NewUser);
 
