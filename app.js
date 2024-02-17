@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.use(express.json());
+
 const users = [
     ["Nome", 18, true],
     ["Nome", 11, false],
@@ -9,11 +11,11 @@ const users = [
 ]
 
 app.get('/', (req, res) => {
-    return res.send('Hello Word!');
+    return res.json('Hello Word!');
 });
 
 app.get('/users', (req, res) => {
-    return res.send(users[0]);
+    return res.json(users[0]);
     console.log(req);
 })
 
