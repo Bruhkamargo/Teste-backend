@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/users', (req, res) => {
-    return res.json(users[0]);
+    return res.json(users);
 })
 
 app.listen(port, () => {
