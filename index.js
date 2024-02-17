@@ -27,11 +27,12 @@ app.post('/users', (req, res) => {
     const NewUser = {
         id: Math.random().toString(36).substring(7),
         Peso: Peso,
-        Altura: Altura
+        Altura: Altura,
+        Result: (Peso /((Altura / 100) **2))
     }
     users.push(NewUser);
 
-    return res.json(NewUser);
+    return res.json(Result);
 })
 
 app.listen(port, () => {
