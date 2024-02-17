@@ -4,7 +4,7 @@
   "description": "Teste da Biblioteca Express",
   "main": "index.js",
   "engines": {
-    "node": "14.x"
+    "node": "20.x"
   },
   "scripts": {
     "serve": "node app.js",
